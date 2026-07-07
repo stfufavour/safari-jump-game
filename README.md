@@ -1,9 +1,9 @@
-# Safari Jump 🦁
+# Safari Jump 
 
 A simple 2D endless-runner game built with Python and `pygame-ce`.
 
-You play a safari explorer running across the savanna, jumping over
-obstacles that come your way: **water puddles**, **rocks**, and **sleeping
+playas a safari explorer running across the safari/savanna, jumping over
+obstacles that you approach **water puddles**, **rocks**, and **sleeping
 lions**. The game gets faster the longer you survive, and your best score
 is saved between sessions.
 
