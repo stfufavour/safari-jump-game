@@ -189,11 +189,13 @@ class Background:
 
     def _draw_trees(self, surface):
         tree_offset = int(self.scroll_x * 0.5) % 400
+        trunk_height = 70
+        trunk_top = GROUND_Y - trunk_height
         for ox in range(-tree_offset, WIDTH + 400, 400):
             trunk_x = ox + 60
-            pygame.draw.rect(surface, TREE_TRUNK, (trunk_x, 210, 8, 60))
-            pygame.draw.ellipse(surface, TREE_LEAF, (trunk_x - 45, 175, 100, 30))
-            pygame.draw.ellipse(surface, TREE_LEAF, (trunk_x - 25, 160, 70, 25))
+            pygame.draw.rect(surface, TREE_TRUNK, (trunk_x, trunk_top, 8, trunk_height))
+            pygame.draw.ellipse(surface, TREE_LEAF, (trunk_x - 45, trunk_top - 35, 100, 30))
+            pygame.draw.ellipse(surface, TREE_LEAF, (trunk_x - 25, trunk_top - 50, 70, 25))
 
     def _draw_ground(self, surface):
         pygame.draw.rect(surface, SAND, (0, GROUND_Y, WIDTH, HEIGHT - GROUND_Y))
